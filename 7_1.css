@@ -1,5 +1,5 @@
 :root {
-  --blue: #12d2db;
+  --blue: #db124e;
   --white: #fcf2fa;
   --purple: #d45f5f;
   --purple-blc: #230622dd;
@@ -59,11 +59,15 @@ a:hover {
   margin-right: 40px;
   display: none;
 }
+.bx-menu {
+  background-color: var(--purple);
+}
 .checkbtn i {
-  color: var(--white);
+  color: var(--purple);
   padding: 5px;
   border-radius: 10px;
   transition: 0.5s ease;
+  font-size: 70%;
 }
 .checkbtn i:hover {
   background: var(--purple);
@@ -99,12 +103,13 @@ section {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: var(--purple-blc);
+    background: var(--purple);
     top: 80px;
     left: -100%;
     padding-top: 80px;
     text-align: center;
     transition: 0.5s ease;
+    opacity: 1;
   }
   nav ul li {
     display: block;
@@ -149,7 +154,7 @@ section {
 
 .bubbletext {
   position: relative;
-  width: 48em;
+  width: 68%;
   height: 14em;
   /* margin: 0.1em; */
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
@@ -312,6 +317,11 @@ body {
   padding: 15px;
 }
 /* ---------сёрч------ */
+.search {
+  display: grid;
+  align-self: center;
+  justify-content: center;
+}
 form {
   background-color: #d45f5f;
   height: 44px;
@@ -320,9 +330,10 @@ form {
   display: flex;
   flex-direction: row;
   align-self: center;
+  align-items: center;
   vertical-align: top;
   padding-left: 5px;
-  margin-left: 2.5em;
+  /* margin-left: 5%; */
 }
 
 input {
@@ -361,15 +372,17 @@ button {
   background: #ddcace;
   /* border: 5px solid #fff5fd;
   border-radius: 15px; */
+  /* width: 100%; */
   height: 15em;
   align-self: center;
   justify-content: center;
   margin-top: 100px;
+  max-width: 99%;
 }
 
 .bubbletext1 {
   position: relative;
-  width: 48em;
+  width: 68%;
   height: 14em;
   /* margin: 0.1em; */
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
@@ -394,9 +407,10 @@ button {
 
 .sidebar {
   background: #ddbdc3; /* Цвет фона */
-  width: 30em;
+  width: 100%;
   /* height: 100vh; */
   display: grid;
+  align-items: center;
 }
 .cardcontent {
   min-height: 100vh;
@@ -419,6 +433,8 @@ button {
   justify-content: center;
   align-items: flex-start;
   min-height: 50vh;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 .card:hover {
   height: 25em;
@@ -466,6 +482,7 @@ button {
   color: #d45f5f;
 }
 .card .content p {
+  margin-top: 5px;
   color: #222;
 }
 .card .content .btn {
@@ -499,7 +516,7 @@ i {
 }
 
 /*------------- footer------------------ */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 body {
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
@@ -508,7 +525,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 .footer-container {
   max-width: 100%;
   margin: auto;
@@ -590,5 +607,67 @@ ul {
 @media (max-width: 574px) {
   .footer-col {
     width: 100%;
+  }
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+  .bubbletext1 h2,
+  .bubbletext h2 {
+    font-size: 1.5em;
+  }
+  .bubbletext1 p,
+  .bubbletext p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 500px) {
+  .bubbletext1 h2,
+  .bubbletext h2 {
+    font-size: 1em;
+  }
+  .bubbletext1 p,
+  .bubbletext p {
+    font-size: 0.9em;
+  }
+}
+
+@media (min-width: 767px) {
+  .bubbletext1 h2,
+  .bubbletext h2 {
+    font-size: 1.5em;
+  }
+  .bubbletext1 p,
+  .bubbletext p {
+    font-size: 1.2em;
+  }
+  .nav {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+  .cont {
+    flex: 0 0 100%;
+    width: 100%;
+    order: 1;
+  }
+  .sidebar {
+    flex: 0 0 100%;
+    min-width: 100%;
+    order: 2;
+  }
+}
+@media (min-width: 1400px) {
+  .cont {
+    flex: 0 0 75%;
+    width: 75%;
+  }
+  .sidebar {
+    flex: 0 0 25%;
+    min-width: 25%;
   }
 }
